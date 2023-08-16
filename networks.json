@@ -1,0 +1,8 @@
+{
+  "goerli": {
+    "NFTManager": {
+      "address": "0x18d0cB6c2E6Ba1B03e8bE0acc5cbc4a296aD42B7",
+      "startBlock": 0
+    }
+  }
+}

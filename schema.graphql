@@ -1,0 +1,54 @@
+type NFTCreate @entity(immutable: true) {
+  id: Bytes!
+  creator: Bytes! # address
+  nftAddress: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type NFTDetail @entity(immutable: true) {
+  id: Bytes!
+  nftAddress: Bytes! # address
+  name: String! # string
+  symbol: String! # string
+  description: String! # string
+  basePrice: BigInt! # uint256
+  isListed: Boolean! # bool
+  documents: [String!]! # string[]
+  imageUri: String! # string
+  tokenId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type NFTTransfer @entity(immutable: true) {
+  id: Bytes!
+  sellerAddress: Bytes! # address
+  buyerAddress: Bytes! # address
+  nftAddress: Bytes! # address
+  isTransfer: Boolean! # bool
+  sellingPrice: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type UpdateWhitelistAddress @entity(immutable: true) {
+  id: Bytes!
+  whitelistAddress: Bytes! # address
+  status: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
